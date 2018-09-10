@@ -1,34 +1,55 @@
 <section id="features">
   <div class="container">
-    <div class="row">
-      <div class="center">
-        <div class="col-md-6 col-md-offset-3">
-          <h2>Pricing</h2>
-          <hr>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</p>
+      <h2>Pricing</h2>
+      <hr>
+      <div class="component" *ngFor="let item of components_list; let i = index">
+        <div class="checked">
+          <input type="checkbox" [checked]="item.checked">
         </div>
+        <div class="name">{{item.name}}</div>
+        <div class="price">{{item.price | currency}}</div>
+        <div class="desc">{{item.desc}}</div>
       </div>
-
-      <div class="col-md-4 wow fadeInLeft">
-        <h3>Responsive</h3>
-        <img src="/src/assets/images/portfolio/recent/item4.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut non cupidatat skateboard
-          dolor brunch.</p>
+      <div class="component_cost">
+          <div class="desc">Total Cost Per Month Not Including Professional  Services</div>
+          <div class="price">{{733.21 | currency}}</div>
       </div>
-
-      <div class="col-md-4 wow fadeInUp">
-        <h3>Web Design</h3>
-        <img src="/src/assets/images/portfolio/recent/item5.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut non cupidatat skateboard
-          dolor brunch.</p>
+      <div class="component_estimation">
+          <div class="estimation">
+            <div class="est">
+                <div class="left">ESTIMATED PROFESSIONAL SERVICES IN MINUTES</div>
+                <div class="right">{{170|currency}}</div>
+            </div>
+            <div class="pay">
+                <div class="desc"><input type="checkbox">PAY AS YOU GO @ $6.25				</div>
+                <div class="price">{{0|currency}}</div>
+            </div>
+            <div class="pay">
+                <div class="desc"><input type="checkbox">PREPAID @ $4.17				</div>
+                <div class="price">{{708.9|currency}}</div>
+            </div>
+          </div>
+          <div class="description">
+              ALL MINUTES CAN BE APPLIED TO ANY SERVICE. PAY AS YOU GO MINUTES ARE BILLED AT THE END OF THE MONTH WITH USAGE 
+              REPORTS DELIVERED EVERY MORNING FOR THE PRIOR 24 HOURS AND MONTH-TO-DATE.
+          </div>
       </div>
-
-      <div class="col-md-4 wow fadeInRight">
-        <h3>Easy Customize</h3>
-        <img src="/src/assets/images/portfolio/recent/item6.png" alt="">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut non cupidatat skateboard
-          dolor brunch.</p>
+      <div class="component_email">
+          <div class="name">Total Cost Per Month Not Including Professional  Services</div>
+          <div class="price">{{1442.11 | currency}}</div>
+          <div class="desc">TOTAL DUE AT SIGN UP</div>
       </div>
-    </div>
+      <div class="component_description">
+          <div class="left">PRE PAID MINUTES CAN BE USED FOR ANY SERVICE. WHEN YOU RUN OUT YOU CAN EITHER 
+            BUY ANOTHER 60 MINUTES OR PAY AS YOU GO. ALL UNUSED PREPAID MINUTES ROLL OVER TO THE NEXT 30-DAY BILLING CYCLE. 
+            PRE PAID MINUTES PURCHASED IN 60-MINUTE BLOCKS.
+					</div>
+          <div class="right">
+              THIS IS NOT YOUR POLICY BUT ONLY A QUOTE FOR SERVICES. 
+              IF YOU HAVE ANY QUESTIONS, 
+              PLEASE, CONTACT US DIRECLTLY AT SUPPORT@XAASUTILITY.COM A COPY WILL BE EMAILED TO THE REPRESENTATIVE WHO COMPLETED 
+              THIS QUOTEATION AND TO XAAS UTILITY. THANK YOU!
+          </div>
+      </div>
   </div>
 </section>
